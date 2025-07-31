@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MAT_Grass_Low
-  m_Shader: {fileID: -6465566751694194690, guid: 80c9725ed816fb44dadae33e8d0e72f5, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: dfa03020483fe3a4da9b08378c60207e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -76,6 +76,10 @@ Material:
         m_Texture: {fileID: 8400000, guid: 8ab450977b832b74c9809d891f299c2f, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WindTexture:
+        m_Texture: {fileID: 2800000, guid: d789adb719105f146b0d3feedf8e7e80, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -109,6 +113,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _HeightBlend: 0.1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -122,18 +127,25 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _TerrainOffset: 0
-    - _TerrainSize: 0
+    - _TerrainSize: 1000
+    - _WindHeight: 0.5
+    - _WindIntensity: 0.2
+    - _WindNoiceSpeed: 1
+    - _WindSpeed: 0.1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.062491976, g: 0.4943396, b: 0.154255, a: 1}
+    - _BottomColor: {r: 0, g: 0.5849056, b: 0.27337977, a: 0}
     - _Color: {r: 0.062491953, g: 0.49433953, b: 0.15425497, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FarColor: {r: 0.04745456, g: 0.5849056, b: 0.08035971, a: 0}
+    - _FarColor: {r: 0.14866613, g: 0.7660377, b: 0.02746162, a: 0}
     - _GrassColor: {r: 0, g: 0, b: 0, a: 0}
-    - _NearColor: {r: 0.5849056, g: 0.5525072, b: 0.13132781, a: 0}
+    - _NearColor: {r: 0, g: 0, b: 0, a: 0}
     - _NearFarRange: {r: 4, g: 10, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WindNoiceContrast: {r: 0, g: 3.1, b: 0, a: 0}
+    - _WindNoiceScale: {r: 40, g: 100, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4343629687782106787
