@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Dog_StateMachine : MonoBehaviour
 {
-    public IDogState CurrentState { get; private set; }
+    public IState CurrentState { get; private set; }
 
     public NavMeshAgent NavMeshAgent;
 
@@ -33,7 +33,7 @@ public class Dog_StateMachine : MonoBehaviour
         CurrentState.Update();
     }
 
-    public void ChangeState(IDogState newState)
+    public void ChangeState(IState newState)
     {
         CurrentState?.Exit();
         CurrentState = newState;

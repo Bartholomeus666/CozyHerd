@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Dog_MoveState : IDogState
+public class Dog_MoveState : IState
 {
     private Dog_StateMachine _stateMachine;
 

@@ -14,7 +14,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -129,9 +129,9 @@ Material:
     - _BaseColor: {r: 0.062491976, g: 0.4943396, b: 0.154255, a: 1}
     - _Color: {r: 0.062491953, g: 0.49433953, b: 0.15425497, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FarColor: {r: 0, g: 0.5999999, b: 0.040800612, a: 0}
+    - _FarColor: {r: 0.04745456, g: 0.5849056, b: 0.08035971, a: 0}
     - _GrassColor: {r: 0, g: 0, b: 0, a: 0}
-    - _NearColor: {r: 0.6603774, g: 0.6101834, b: 0, a: 0}
+    - _NearColor: {r: 0.5849056, g: 0.5525072, b: 0.13132781, a: 0}
     - _NearFarRange: {r: 4, g: 10, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
