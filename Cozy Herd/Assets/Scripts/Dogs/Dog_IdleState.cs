@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Dog_IdleState : IDogState
+public class Dog_IdleState : IState
 {
     public void Enter()
     {
