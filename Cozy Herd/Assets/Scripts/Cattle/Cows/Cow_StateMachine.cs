@@ -9,6 +9,7 @@ public class Cow_StateMachine : MonoBehaviour
     public NavMeshAgent NavMeshAgent;
 
     public bool isLeader = false;
+    public bool isFollowing = false;
 
     public Cow_LeaderState LeaderState;
     public Cow_FollowingState FollowingState;
@@ -16,19 +17,20 @@ public class Cow_StateMachine : MonoBehaviour
     public Cow_RunningState RunningState;
 
     public float DetectionRange = 10f;
+    public float HerdRange = 5f;
 
-    public string HerdName;
+    public Herd Herd = null;
 
     private void Start()
     {
         if(isLeader)
         {
-            HerdName = gameObject.name;
+            Herd = GetComponent<Herd>();
         }
 
 
-        LeaderState = new Cow_LeaderState ();
-        FollowingState = new Cow_FollowingState();
+        LeaderState = new Cow_LeaderState(this);
+        FollowingState = new Cow_FollowingState(this);
         IdleState = new Cow_IdleState(this);
         RunningState = new Cow_RunningState(this);
 
@@ -38,18 +40,15 @@ public class Cow_StateMachine : MonoBehaviour
     private void Update()
     {
         CurrentState.Update();
-
-        if (FindHerd())
-        {
-
-        }
     }
 
-    private bool FindHerd()
+    public void PickedUpByHerd(Herd herd)
     {
-
-
-        return false;
+        Debug.Log($"Cow {gameObject.name} picked up by herd {herd.name}");
+        isFollowing = true;
+        Herd = herd;
+        Herd.herdMembers.Add(this.gameObject);
+        ChangeState(FollowingState);
     }
 
     public void ChangeState(IState newState)

@@ -13,12 +13,7 @@ public class Goal : MonoBehaviour
 
     private void GeneratGoals()
     {
-        Cattlegoal cattlegoal = new Cattlegoal
-        {
-            Type = CattleType.Cow,
-            WantedAmount = 5,
-            CurrentAmount = 0
-        };
+        Cattlegoal cattlegoal = new Cattlegoal(CattleType.Cow, 5);
         Goals.Add(cattlegoal);
     }
 

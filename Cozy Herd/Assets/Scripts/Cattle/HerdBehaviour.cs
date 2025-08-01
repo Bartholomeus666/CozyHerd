@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HerdBehaviour : MonoBehaviour
 {
-    public List<Transform> herdMembers;
+    
 
     
 }

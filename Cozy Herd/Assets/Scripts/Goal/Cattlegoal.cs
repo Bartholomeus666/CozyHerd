@@ -2,9 +2,19 @@ using UnityEngine;
 
 public class Cattlegoal : MonoBehaviour
 {
+
+
+
     public CattleType Type;
     public int WantedAmount = 0;
     public int CurrentAmount = 0;
+
+    public Cattlegoal(CattleType type, int wantedAm)
+    {
+        Type = type;
+        WantedAmount = wantedAm;
+        CurrentAmount = 0;
+    }
 
     public void CheckIfAmountReached(int amount)
     {
