@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8591696485037964493}
   - component: {fileID: 5154817494624420724}
   - component: {fileID: 1778899441388237521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 2842882997786863694}
   - component: {fileID: 7354548365948991029}
   - component: {fileID: 7710871242228356796}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodyReplacement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 7812216061866709198}
   - component: {fileID: 5403080648031916597}
   - component: {fileID: 5107168414159604335}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EYE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,8 @@ GameObject:
   - component: {fileID: 3654138388251191668}
   - component: {fileID: 3247257723081495517}
   - component: {fileID: 2649576070089258155}
-  m_Layer: 0
+  - component: {fileID: 487143960504384214}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -522,19 +523,7 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Dog_StateMachine, Assembly-CSharp
-        m_MethodName: GetMoveOrder
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 5ea8552f-d407-4349-94f6-602f6ef3f5d2
     m_ActionName: 'Player/OrderDog[/Mouse/rightButton]'
   - m_PersistentCalls:
@@ -575,3 +564,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
+--- !u!114 &487143960504384214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094054107344079790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d888167e36609c4087bed11d5f6d404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

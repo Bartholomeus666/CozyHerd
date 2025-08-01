@@ -25,7 +25,14 @@ public class Cow_RunningState : IState
     {
         Vector3 directionToPlayer = -((_player.position - _stateMachine.transform.position).normalized);
 
-        _stateMachine.NavMeshAgent.SetDestination(_stateMachine.transform.position + directionToPlayer * _stateMachine.NavMeshAgent.speed);
+        if (_stateMachine.NavMeshAgent != null && _stateMachine.NavMeshAgent.enabled && _stateMachine.NavMeshAgent.isOnNavMesh)
+        {
+            _stateMachine.NavMeshAgent.SetDestination(_stateMachine.transform.position + directionToPlayer * _stateMachine.NavMeshAgent.speed);
+        }
+        else
+        {
+            Debug.LogWarning($"{_stateMachine.name}: Cannot set destination - agent not on NavMesh");
+        }
 
         if (_stateMachine.isLeader)
         {

@@ -1,4 +1,6 @@
+using System.Xml.Linq;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Dog_MoveState : IState
 {
@@ -11,7 +13,14 @@ public class Dog_MoveState : IState
 
     public void Enter()
     {
-        _stateMachine.NavMeshAgent.SetDestination(_stateMachine.TargetPosition);
+        if (_stateMachine.NavMeshAgent != null && _stateMachine.NavMeshAgent.enabled && _stateMachine.NavMeshAgent.isOnNavMesh)
+        {
+            _stateMachine.NavMeshAgent.SetDestination(_stateMachine.TargetPosition);
+        }
+        else
+        {
+            Debug.LogWarning($"{_stateMachine.name}: Cannot set destination - agent not on NavMesh");
+        }
     }
 
     public void Exit()

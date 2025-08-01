@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9041437474782361080}
   - component: {fileID: 1721565469271857908}
   - component: {fileID: 1009543779985859187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cow
   m_TagString: Cow
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 6514840796262727649}
   - component: {fileID: 1076027431187307588}
   - component: {fileID: 8389772630356497882}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FakeBody (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 5408996298209645712}
   - component: {fileID: 9055518683486491825}
   - component: {fileID: 9049047603011973935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FakeBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Cow_LeaderState : IState
 {
@@ -15,6 +14,7 @@ public class Cow_LeaderState : IState
     public void Enter()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _stateMachine.NavMeshAgent.speed = 3.5f;
         Debug.Log("Leader state entered");
     }
 
@@ -33,7 +33,14 @@ public class Cow_LeaderState : IState
     {
         Vector3 directionToPlayer = -((_player.position - _stateMachine.transform.position).normalized);
 
-        _stateMachine.NavMeshAgent.SetDestination(_stateMachine.transform.position + directionToPlayer * _stateMachine.NavMeshAgent.speed);
+        if (_stateMachine.NavMeshAgent != null && _stateMachine.NavMeshAgent.enabled && _stateMachine.NavMeshAgent.isOnNavMesh)
+        {
+            _stateMachine.NavMeshAgent.SetDestination(_stateMachine.transform.position + directionToPlayer * _stateMachine.NavMeshAgent.speed);
+        }
+        else
+        {
+            Debug.LogWarning($"{_stateMachine.name}: Cannot set destination - agent not on NavMesh");
+        }
 
         if (_stateMachine.isLeader)
         {

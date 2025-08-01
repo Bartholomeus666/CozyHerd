@@ -1,15 +1,13 @@
 using UnityEngine;
 
-public class Cattlegoal : MonoBehaviour
+[CreateAssetMenu(fileName = "New Cattle Goal", menuName = "Goals/Cattle Goal")]
+public class Cattlegoal : ScriptableObject
 {
-
-
-
     public CattleType Type;
     public int WantedAmount = 0;
     public int CurrentAmount = 0;
 
-    public Cattlegoal(CattleType type, int wantedAm)
+    public void Initialize(CattleType type, int wantedAm)
     {
         Type = type;
         WantedAmount = wantedAm;
@@ -20,6 +18,7 @@ public class Cattlegoal : MonoBehaviour
     {
         if(CurrentAmount + amount >= WantedAmount)
         {
+            CurrentAmount += amount;
             Debug.Log($"Goal reached for {Type} with {CurrentAmount} out of {WantedAmount}.");
         }
         else
@@ -30,8 +29,3 @@ public class Cattlegoal : MonoBehaviour
     }
 }
 
-public enum CattleType
-{
-    Cow,
-    Sheep
-}
