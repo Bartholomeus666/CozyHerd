@@ -8,6 +8,7 @@ TagManager:
   - Dog
   - Bull
   - Goal
+  - Gate
   layers:
   - Default
   - TransparentFX

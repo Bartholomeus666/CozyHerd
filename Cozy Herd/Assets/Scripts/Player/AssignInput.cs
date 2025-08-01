@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class AssignInput : MonoBehaviour
 {
     private GameObject _dog;
-    private GameObject[] _goals;
+    private GameObject[] _gates;
 
     private PlayerInput _playerInput;
 
@@ -18,8 +18,8 @@ public class AssignInput : MonoBehaviour
 
         _dog = GameObject.FindGameObjectWithTag("Dog");
 
-        _goals = GameObject.FindGameObjectsWithTag("Goal");
-        Debug.Log($"Found {_goals.Length} goals in the scene.");
+        _gates = GameObject.FindGameObjectsWithTag("Gate");
+        Debug.Log($"Found {_gates.Length} goals in the scene.");
 
         _assignDog = false;
     }
@@ -41,10 +41,10 @@ public class AssignInput : MonoBehaviour
     }
     private void AssignGate()
     {
-        foreach(GameObject goal in _goals)
+        foreach(GameObject goal in _gates)
         {
-            _playerInput.actions.actionMaps[0].FindAction("Interact").performed += goal.GetComponentInChildren<GateWork>().OpenGate;
-            Debug.Log($"Assigned Interact action to goal: {goal.name}");
+            _playerInput.actions.actionMaps[0].FindAction("Interact").performed += goal.GetComponent<GateWork>().OpenGate;
+            goal.GetComponentInChildren<GateWork>().Debugg();
         }
     }
 }

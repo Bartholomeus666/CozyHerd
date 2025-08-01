@@ -65,6 +65,7 @@ public class GateWork : MonoBehaviour
 
     private void PlayGateOpenAnimation()
     {
+        Debug.Log("Playing gate open animation");
 
         GateL.transform.position = Vector3.Lerp(GateL.transform.position, initialPositionL + transform.right * 4f, Time.deltaTime * 2f);
         GateR.transform.position = Vector3.Lerp(GateR.transform.position, initialPositionR + transform.right * -4f, Time.deltaTime * 2f);
@@ -90,5 +91,10 @@ public class GateWork : MonoBehaviour
             isGateOpen = false;
             isGateClosing = false;
         }
+    }
+
+    public void Debugg()
+    {
+        Debug.Log("Found me");
     }
 }

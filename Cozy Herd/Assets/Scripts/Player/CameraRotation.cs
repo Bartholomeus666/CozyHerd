@@ -27,7 +27,6 @@ public class CameraRotation : MonoBehaviour
     public void OnMouseDelta(InputAction.CallbackContext context)
     {
         mouseDelta = context.ReadValue<Vector2>();
-        Debug.Log($"Mouse Delta: {mouseDelta}");
     }
 
     private void Update()
@@ -41,8 +40,6 @@ public class CameraRotation : MonoBehaviour
     private void HandleRotation()
     {
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
-
-        Debug.Log($"Direct Mouse Delta: {mouseDelta}");
 
         transform.Rotate(Vector3.up, mouseDelta.x * Time.deltaTime * rotationSpeed);
     }
