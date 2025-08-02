@@ -11,7 +11,7 @@ public class GateWork : MonoBehaviour
     Vector3 initialPositionR;
 
     private bool isGateOpen = false;
-    private bool isGateClosed = true;
+    public bool isGateClosed = true;
 
     private bool isGateOpening = false;
     private bool isGateClosing = false;

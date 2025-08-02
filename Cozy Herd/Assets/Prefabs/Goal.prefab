@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goals: []
+  VictoryCanvas: {fileID: 3878241278717559145, guid: c9c023016148c5d45bfef435bd452231, type: 3}
 --- !u!1 &6098787483517930708
 GameObject:
   m_ObjectHideFlags: 0

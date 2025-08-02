@@ -7,11 +7,12 @@ public class Cattlegoal : ScriptableObject
     public int WantedAmount = 0;
     public int CurrentAmount = 0;
 
+    public bool Finished = false;
+
     public void Initialize(CattleType type, int wantedAm)
     {
         Type = type;
         WantedAmount = wantedAm;
-        CurrentAmount = 0;
     }
 
     public void CheckIfAmountReached(int amount)
@@ -19,6 +20,7 @@ public class Cattlegoal : ScriptableObject
         if(CurrentAmount + amount >= WantedAmount)
         {
             CurrentAmount += amount;
+            Finished = true;
             Debug.Log($"Goal reached for {Type} with {CurrentAmount} out of {WantedAmount}.");
         }
         else
